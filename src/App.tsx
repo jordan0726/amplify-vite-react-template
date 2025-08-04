@@ -20,9 +20,9 @@ function App() {
   }
   
     
-  // function deleteTodo(id: string) {
-  //   client.models.Todo.delete({ id })
-  // }
+  function deleteTodo(id: string) {
+    client.models.Todo.delete({ id })
+  }
 
   return (
     <main>
@@ -31,7 +31,7 @@ function App() {
       <ul>
         {todos.map((todo) => (
           <li 
-          // onClick={() => deleteTodo(todo.id)}
+          onClick={() => deleteTodo(todo.id)}
           key={todo.id}>{todo.content}</li>
         ))}
       </ul>
